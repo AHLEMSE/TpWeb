@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>
+        Project Holder 
+    </title>
+</head>
+<body>
+    <header>
+<nav>
+    <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li class="submenu">
+            <a href="#Calls">Calls</a>
+        <ul class="submenu-content">
+            <li><a href="#Horizons">Horizons</a></li>
+            <li><a href="#Erasmus1">Erasmus</a></li>
+            <li><a href="#Prima">Prima</a></li>
+
+        </ul>
+        </li>
+
+        <li class="submenu">
+            <a href="#Project">Project</a>
+        <ul class="submenu-content">
+            <li><a href="#Horizon">Horizon </a></li>
+            <li><a href="#CBHE">CBHE </a></li>
+            <li><a href="#PNR">PNR </a></li>
+              <li><a href="#CNEPRU">CNEPRU </a></li>
+        </ul>
+        </li>
+        <li class="submenu">
+            <a href="#Mobility">Mobility</a>
+            <ul class="submenu-content">
+                <li><a href="#National">National</a></li>
+                <li><a href="#Erasmus2">Erasmus</a></li>
+                <li><a href="#Exchange">Exchange</a></li>
+        </ul>
+        </li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+    </header>
+    <main>
+        <section id="home"  >
+     <h1>International Cooperation Projects Tracking Platform</h1>
+     <div class="slideshow">
+    <div class="slides">
+        <img src="images/Chercheurs_internationaux_laboratoire.jpg" alt="Chercheurs internationaux au laboratoire">
+        <img src="images/international.jpg" alt=" International collaboration">
+        <img src="images/world.webp" alt=" World map with international connections">
+        <img src="images/etudiant.jpg" alt="International students">
+        <img src="images/Chercheurs_internationaux_laboratoire.jpg" alt="" aria-hidden="true">
+    </div>
+</div>
+    <br/>
+    <hr>
+    <h2>Watch: Erasmus+ and Horizon Europe funding</h2>
+
+    <br/>
+      <video width="800" height="500" controls muted  >
+        <source src="videos/erasmusvideo.webm"  type="video/webm"/>
+        Your browser does not support the video tag.
+      </video>
+      <p>Source: Euronews, <a href="https://youtu.be/2PJck6rJ7HA">"Will Erasmus+ and Horizon Europe see their budgets slashed?"</a></p>
+    </section>
+        <section id="Calls">
+            <h2>Calls</h2>
+              <p>Open calls for international cooperation proposals.</p>
+            <section id="Horizons">
+                <h3>Horizons</h3>
+                 <p>Horizon Europe funds collaborative research and innovation projects.</p>
+            </section>
+            <section id="Erasmus1">
+                <h3>Erasmus</h3>
+                <p>Erasmus+ supports education, training, youth, and sport in the EU.</p>
+            </section>
+            <section id="Prima">
+                <h3>Prima</h3>
+                <p>PRIMA funds research and innovation in the Mediterranean region.</p>
+            </section>
+        </section>
+
+        <section id="Project">
+            <h2>Project</h2>
+
+            <section id="Horizon">
+                <h3>Horizon</h3>
+            
+            </section>
+            <section id="CBHE">
+                <h3>CBHE</h3>
+            </section>
+            <section id="PNR">
+                <h3>PNR</h3>
+            </section>
+            <section id="CNEPRU">
+                <h3>CNEPRU</h3>
+            </section>
+            <section id="proposalForm">
+                <h3>Proposal Form</h3>
+                <form method ="post" enctype="multipart/form-data">
+
+                  <legend>Project Information</legend>
+                   <br/>
+                    <textarea name="proposal" rows="10" cols="50" placeholder="Enter project information"></textarea>
+                     <br/>
+                    <label for="program">Choose a program:</label>
+                    <select id="program" name="program" required>
+                        <option value="horizon">Horizon</option>
+                        <option value="cbhe">CBHE</option>
+                        <option value="pnr">PNR</option>
+                        <option value="cnepru">CNEPRU</option>
+                    </select>
+                    <br/>
+                    <label for="call">Select a call:</label>
+                    <select id="call" name="call" required>
+                        <option value="horizons">Horizons</option>
+                        <option value="easmus">Erasmus</option>
+                        <option value="prima">Prima</option>
+                    </select>
+                    <br/>
+                    <fieldset>
+                    <legend>Partners</legend>
+                     <label for="partners">Partner information:</label><br/>
+                     <textarea id="partners" name="partners" rows="6" cols="50"
+                        placeholder="For each partner: institution name, country, contact person, email, role in the project"></textarea>
+                </fieldset>
+                <label for="support">Support needs</label><br/>
+                <textarea id="support" name="support" rows="4" cols="50" placeholder="Describe the support you need for your project"></textarea><br/>
+                  <label for="document">Add Document</label><br/>
+                <input type="file" id="document" name="draft" accept=".pdf"  multiple />
+                <button type="submit" name="action" value="draft" formnovalidate>Save Draft</button>
+               <!--formnovalidate on Save Draft skips the required checks,-->
+                <button type="submit" name="action" value="submit">Submit</button>
+                
+        <fieldset>
+        <legend>Team Members</legend>
+          <table>
+            <caption>Project members</caption>
+            <thead>
+              <tr>
+                  <th scope="col" rowspan="2">Institution</th>
+                  <th scope="col" colspan="3">Member</th>
+              </tr>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Role</th>
+                </tr>
+            </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" name="institution[]" aria-label="Institution" placeholder="Institution"></td>
+                <td><input type="text" name="member_name[]" aria-label="Name" placeholder="Full name"></td>
+                <td>
+                    <select name="grade[]" aria-label="Grade">
+                        <option value="professor">Professor</option>
+                        <option value="associate">Associate Professor</option>
+                        <option value="lecturer">Lecturer</option>
+                        <option value="phd">PhD Student</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="role[]" aria-label="Role">
+                        <option value="coordinator">Coordinator</option>
+                        <option value="researcher">Researcher</option>
+                    </select>
+                </td>
+            </tr>
+               <tr>
+                <td><input type="text" name="institution[]" aria-label="Institution" placeholder="Institution"></td>
+                <td><input type="text" name="member_name[]" aria-label="Name" placeholder="Full name"></td>
+                <td>
+                    <select name="grade[]" aria-label="Grade">
+                        <option value="professor">Professor</option>
+                        <option value="associate">Associate Professor</option>
+                        <option value="lecturer">Lecturer</option>
+                        <option value="phd">PhD Student</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="role[]" aria-label="Role">
+                        <option value="coordinator">Coordinator</option>
+                        <option value="researcher">Researcher</option>
+                    </select>
+                </td>
+            </tr>    <tr>
+                <td><input type="text" name="institution[]" aria-label="Institution" placeholder="Institution"></td>
+                <td><input type="text" name="member_name[]" aria-label="Name" placeholder="Full name"></td>
+                <td>
+                    <select name="grade[]" aria-label="Grade">
+                        <option value="professor">Professor</option>
+                        <option value="associate">Associate Professor</option>
+                        <option value="lecturer">Lecturer</option>
+                        <option value="phd">PhD Student</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="role[]" aria-label="Role">
+                        <option value="coordinator">Coordinator</option>
+                        <option value="researcher">Researcher</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>
+                </form>
+                
+
+                
+            </section>
+        </section>
+
+
+
+        <section id="Mobility">
+            <h2>Mobility</h2>
+            <p>
+    Mobility programs allow researchers, teachers and students to spend a period
+    at another institution, in Algeria or abroad, in order to share knowledge,
+    develop joint research and strengthen international partnerships.
+            </p>
+            <section id="National">
+                <h3>National</h3>
+            </section>
+            <section id="Erasmus2">
+                <h3>Erasmus</h3> 
+                </section>
+            <section id="Exchange">
+                <h3>Exchange</h3>
+            </section>
+        </section>
+        <section id="About">
+        <h2>About</h2>
+        <p>
+    This platform supports the university's international cooperation projects.
+    It helps researchers declare their project intentions, submit their drafts,
+    request support and follow their proposals up to submission, while giving
+    managers the tools to review proposals and follow decisions.
+  </p>
+
+  <h3>What you can do</h3>
+  <ul>
+    <li>Declare a project and choose the program and call</li>
+    <li>Submit a draft and describe your support needs</li>
+    <li>Track the status of your proposal</li>
+    <li>Contact the cooperation office for help</li>
+  </ul>
+            </section>
+        
+      </main>  
+      <footer id="contact">
+        
+        <p>
+            Email: <a href="mailto:na_sellami@esi.dz">na_sellami@esi.dz</a>
+        </p>
+        <p>&copy; 2026 Project Holder. All rights reserved.</p>
+      </footer>
+</body>
+</html>
